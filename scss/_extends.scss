@@ -1,0 +1,11 @@
+%shared-nav {
+  position: fixed;
+  box-sizing: border-box;
+  right: -1 * $menu-percent-width;
+  top: 0;
+  bottom: 0;
+  background: $text-light-color;
+  width: $menu-percent-width;
+  transition: right;
+  @include transition_duration(1s);
+}

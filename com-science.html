@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    integrity="sha256-zmfNZmXoNWBMemUOo1XUGFfc0ihGGLYdgtJS3KCr/l0=" crossorigin="anonymous" />
+  <noscript>
+    <link rel="stylesheet" href="css/styles-no-js.css">
+  </noscript>
+  <title>Informatyka</title>
+</head>
+<body>
+  <header>
+    <h1>Informatyka</h1>
+    <i class="fas fa-bars js" onclick="openNav()"></i>
+    <noscript>
+      <input type="checkbox" id="slide" />
+      <label for="slide" class="toggle"><i class="fas fa-bars"></i></label>
+      <nav>
+        <ul>
+          <li><a href="index.html"> O mnie </a></li>
+          <li><a href="projects.html"> Projekty </a></li>
+          <li><a href="com-science.html"> Informatyka </a></li>
+        </ul>
+      </nav>
+    </noscript>
+    <nav class="js">
+      <i class="fas fa-arrow-right" onclick="closeNav()"></i>
+      <ul>
+        <li><a href="index.html"> O mnie </a></li>
+        <li><a href="projects.html"> Projekty </a></li>
+        <li><a href="com-science.html"> Informatyka </a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="cs-content content">
+    <em>Obszary, którymi zajmuję się w informatyce:</em>
+    <section>
+      <h2>Wzorce projektowe</h2>
+      <p>Interesuje mnie tematyka wzorców projektowych, które zapobiegają trudnościom przy późniejszych zmianach w
+        projekcie, a także pozwalają na elegancki i wydajny podział odpowiedzialności między klasami.</p>
+      <noscript>
+        <img src="images/adapter.png" alt="Adapter design pattern" class="pattern">
+      </noscript>
+    </section>
+    <section>
+      <h2>Programowanie asynchroniczne</h2>
+      <p>Jednym z problemów, który jest dla mnie ciekawy, jest obsługa i radzenie sobie z zadaniami, które dzieją się w
+        sposób równoległy, współbieżny. Po poznaniu sposobów, dzięki którymi uzyskujemy asynchroniczność na niskim
+        poziomie, teraz uczę się wysokopoziomowych, zewnętrznych rozwiązań, dzięki którym pisanie asynchronicznego kodu
+        jest wygodne i skuteczne.</p>
+    </section>
+  </main>
+  <script src="js/index.js"></script>
+  <script src="js/com-science.js"></script>
+</body>
+</html>

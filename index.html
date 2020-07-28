@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/fontello.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+  integrity="sha256-zmfNZmXoNWBMemUOo1XUGFfc0ihGGLYdgtJS3KCr/l0=" crossorigin="anonymous" />
+  <noscript>
+    <link rel="stylesheet" href="css/styles-no-js.css">
+  </noscript>
+<title>Portfolio</title>
+</head>
+<body>
+  <header>
+    <h1>Piotr Andrzejewski</h1>
+    <i class="fas fa-bars js" onclick="openNav()"></i>
+    <noscript>
+      <input type="checkbox" id="slide" />
+      <label for="slide" class="toggle"><i class="fas fa-bars"></i></label>
+      <nav>
+        <ul>
+          <li><a href="index.html"> O mnie </a></li>
+          <li><a href="projects.html"> Projekty </a></li>
+          <li><a href="com-science.html"> Informatyka </a></li>
+        </ul>
+      </nav>
+    </noscript>
+    <nav class="js">
+      <i class="fas fa-arrow-right" onclick="closeNav()"></i>
+      <ul>
+        <li><a href="index.html"> O mnie </a></li>
+        <li><a href="projects.html"> Projekty </a></li>
+        <li><a href="com-science.html"> Informatyka </a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="content">
+    <section>
+      <h2>O mnie</h2>
+      <div id="about-me">
+        <p>
+          Nazywam się Piotr Andrzejewski. Urodziłem się w Legnicy w 1998 r. Obecnie jestem studentem Informatyki na
+          Wydziale Podstawowych Problemów Techniki na Politechnice Wrocławskiej. Studia rozpocząłem w październiku 2017
+          r., wcześniej uczęszczałem do II Liceum Ogólnokształcącego w Legnicy, do klasy o profilu matematyczno-fizycznym.
+        </p>
+        <img src="images/portrait.jpg" alt="Portrait photo">
+      </div>
+    </section>
+    <hr>
+    <section>
+      <h2>Zainteresowania</h2>
+      <div class="hobby-wrapper">
+        <div class="hobby">
+          <div class="flex-container">
+            <i class="fas fa-volleyball-ball"></i>
+            <h3 class="hobby-title">siatkówka</h3>
+          </div>
+          <p class="hobby-description">
+            Siatkówka to mój ulubiony sport. Przez wiele lat reprezentowałem barwy klubu MUKS Ikar Legnica, z którym
+            dwukrotnie zdobyłem młodzieżowe wicemistrzostwo Dolnego Śląska. Choć nie jestem już aktywnym zawodnikiem, cały czas w
+            wolnym czasie staram się uprawiać ten sport.
+          </p>
+        </div>
+        <div class="hobby">
+          <div class="flex-container">
+            <h3 class="hobby-title">praca z mikrofonem</h3>
+            <i class="icon-mic"></i>
+          </div>
+          <p class="hobby-description">
+            Od zawsze lubiłem uczestniczyć w wydarzeniach w roli konferansjera lub narratora - najpierw w trakcie szkolnych
+            apelów, później innych wydarzeń takich jak koncerty operowe, konkursy talentów czy gale. Byłem również odpowiedzialny za
+            nadawanie komunikatów w szkolnym radiowęźle, jestem lektorem w mojej parafii.
+          </p>
+        </div>
+        <div class="hobby">
+          <div class="flex-container">
+            <i class="icon-bicycle"></i>
+            <h3 class="hobby-title">turystyka rowerowa</h3>
+          </div>
+          <p class="hobby-description">
+            W wolnym czasie bardzo lubię jeździć na rowerze - jest to świetny sposób zarówno na szybkie przemieszczanie się
+            po mieście, aktywne spędzanie czasu na świeżym powietrzu, ale także poznawanie nowych terenów i pokonywanie dalekich tras. 
+            Moim największym osiągnięciem jest przebycie trasy z Legnicy do Mielna w czasie niecałych 5 dni.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <hr>
+  <footer class="content">
+    <h2>Kontakt</h2>
+    <div class="contact-wrapper">
+      <div class="flex-container contact-item">
+        <i class="icon-mail"></i>
+        <span class="lightgrey">piotr.andrzejewski00@gmail.com</span>
+      </div>
+      <div class="flex-container contact-item">
+        <i class="icon-phone"></i>
+        <span class="lightgrey">696940769</span>
+      </div>
+      <div class="flex-container contact-item">
+        <i class="icon-github-circled"></i>
+        <span class="lightgrey">kichel98</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/index.js"></script>
+</body>
+</html>

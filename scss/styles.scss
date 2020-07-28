@@ -1,0 +1,307 @@
+@import 'variables';
+@import 'mixins';
+@import 'extends';
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: $background-color;
+  @include mq($medium, landscape) {
+      width: 80%;
+      margin: 50px auto 12px auto;
+  }
+}
+
+header {
+  @include flexbox(false, space-between);
+  box-sizing: border-box;
+  align-items: center;
+  color: $text-light-color;
+  background-color: $primary-color;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0 1em 0 1em;
+
+  h1 {
+    font-size: 1.75em;
+    font-weight: 300;
+    color: $text-light-color;
+  }
+}
+
+main {
+  margin-top: 70px;
+}
+
+.content {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+
+.fa-bars, .fa-arrow-right {
+  font-size: 1.75em;
+}
+
+.fa-arrow-right {
+  color: $text-dark-color;
+  margin: 0.5em 0 0 0.5em;
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+nav {
+  @extend %shared-nav;
+  @include flexbox(false, space-between);
+
+  ul {
+    margin-top: 3em;
+    list-style-type: none;
+    margin-right: 20px;
+  }
+
+  li {
+    margin: 20px 0;
+    text-align: right;
+  }
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $text-dark-color;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  @include mq($medium, landscape) {
+    width: 30%;
+    right: -30%;
+  }
+
+  @include mq($large, false) {
+    @include flexbox(true, space-between);
+    position: static;
+    box-sizing: border-box;
+    transition: right;
+    background: transparent;
+    @include transition_duration(1s);
+    width: auto;
+    li {
+      display: inline-block;
+      margin-right: 2em;
+    }
+
+    ul {
+      margin: 0;
+    }
+
+    a {
+      color: $text-light-color;
+      &:hover {
+        color: $text-dark-color;
+      }
+    }
+  }
+}
+
+p {
+  color: $text-dark-color;
+}
+
+#about-me {
+  @include flexbox(false, space-between);
+  align-items: flex-start;
+  p {
+    margin: 0;
+    width: 65%;
+    padding: 0 7px 0 0;
+    box-sizing: border-box;
+  }
+  img {
+    width: 35%;
+    margin-left: 3px;
+    box-sizing: border-box;
+    box-shadow: -1px 3px 28px -11px rgba(0, 0, 0, 0.75);
+  }
+}
+
+section > h2, footer > h2 {
+  text-align: center;
+}
+
+hr {
+  margin-top: 1em;
+  width: 75%;
+  border: 1.2px solid #aaaaaa;
+  border-radius: 2px;
+}
+
+.flex-container {
+  @include flexbox(false, space-between);
+  align-items: center;
+}
+
+.hobby-title {
+  font-weight: 500;
+}
+.hobby-description {
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+footer span {
+  margin: 1em 0;
+}
+
+.fa-volleyball-ball {
+  font-size: 2em;
+}
+
+#slide {
+  display: none;
+}
+
+.toggle {
+  position: fixed;
+  font-size: 1.7em;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 1;
+  color: $text-light-color;
+  transition: right;
+  @include transition_duration(1.1s);
+}
+
+
+ul {
+  list-style-type: square;
+}
+
+.project ul {
+  list-style-position: inside;
+}
+
+#slide:checked ~ .toggle {
+  right: calc(#{$menu-percent-width} - 40px); // ???
+  color: $text-dark-color;
+
+  @include mq($medium, landscape) {
+    right: calc(20% - 40px);
+  }
+}
+
+#slide:checked ~ nav {
+  right: 0;
+}
+
+.fa-bars:hover {
+  color: $text-dark-color;
+}
+
+.project {
+  margin: 0 0 4em 0;
+  img {
+    display: block;
+    margin: auto;
+    width: 70%;
+    margin-bottom: 1em;
+  }
+}
+
+.best-code {
+  width: 80vw;
+  overflow: scroll;
+  background: #faf9f9;
+  @include mq($medium, landscape) {
+    width: initial;
+  }
+}
+
+.keyword {
+  color: #cb602d;
+}
+
+.identifier {
+  color: #ff9641;
+}
+
+.variable {
+  color: #977596;
+}
+
+.annot {
+  color: #bbb529;
+}
+
+span {
+  color: #2b2a2a;
+}
+
+.lightgrey {
+  color: #706e6e;
+  font-size: 0.9em;
+}
+
+@media screen and (min-width: 768px) and (orientation: landscape) {
+
+  .project-img {
+    float: left;
+    max-width: 30%;
+    padding-right: 2em;
+  }
+
+  .project {
+    clear: both;
+  }
+
+  .cs-content {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hobby-wrapper {
+    @include flexbox(false, space-between);
+
+    .hobby {
+      margin: 0 20px;
+    }
+  }
+
+  .contact-item {
+    justify-content: flex-start;
+  }
+
+  .contact-item > * {
+    margin-right: 4em;
+  }
+
+}
+
+@media only screen and (min-width : 1224px) {
+  .hobby {
+    padding: 6px;
+  }
+
+  .fa-bars { 
+    font-size: 0;
+  }
+
+
+  .fa-arrow-right { 
+    font-size: 0;
+  }
+
+  #about-me img {
+    width: 20%;
+  }
+}
